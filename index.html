@@ -183,7 +183,7 @@
     }
 
     function cleanResponse(response) {
-        return response.replace(/<\/?s>/g, '').replace(/\[INST\]/g, '').replace(/\[\]/g, '').trim();
+        return response.replace(/<\/?s>/g, '').replace(/\[INST\]/g, '').replace(/\[\]/g, '').replace(/\s+/g, ' ').trim();
     }
 
     function buildPrompt() {
